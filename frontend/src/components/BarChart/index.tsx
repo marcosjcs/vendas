@@ -1,6 +1,10 @@
 import Chart from 'react-apexcharts';
 
-const BarChart = () => {
+interface Props {
+  theme: string;
+}
+
+const BarChart: React.FC<Props> = ({ theme }) => {
   const options = {
     plotOptions: {
       bar: {
@@ -22,8 +26,8 @@ const BarChart = () => {
   };
 
   return (
-    <Chart 
-      options={{ ...options, xaxis: mockData.labels}}
+    <Chart
+      options={{ ...options, xaxis: mockData.labels, theme: {mode: theme === "light" ? "light" : "dark"} }}
       series={mockData.series}
       type="bar"
       height="240"
