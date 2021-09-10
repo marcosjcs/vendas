@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
@@ -13,7 +15,9 @@ const NavBar: React.FC<Props> = ({ toggleTheme, theme }) => {
   return (
     <div className="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 nav-bar border-bottom shadow-sm">
       <nav className="container my-2 my-md-0 mr-md-3 d-flex justify-content-between align-items-center">
-        <img src={ImgDsDark} alt="DevSuperior" width="120" />
+        <Link to="/">
+          <img src={ImgDsDark} alt="DevSuperior" width="120" />
+        </Link>
         <ButtonChange onClick={toggleTheme}>{icon}</ButtonChange>
       </nav>
   </div>

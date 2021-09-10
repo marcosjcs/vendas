@@ -31,7 +31,7 @@ const Routes = () => {
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         
           <GlobalTheme />
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact render={props => <Home {...props} toggleTheme={toggleTheme} theme={theme}/>}  />
           <Route path="/dashboard" render={props => <Dashboard {...props} toggleTheme={toggleTheme} theme={theme}/>} />
           
         </ThemeProvider>
