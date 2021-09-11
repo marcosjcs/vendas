@@ -5,12 +5,12 @@ import { CgSun } from "react-icons/cg";
 import { HiMoon } from "react-icons/hi";
 import ImgDsDark from 'assets/img/ds-dark.svg';
 
-interface Props {
+type Props = {
   toggleTheme(): void;
   theme: string;
 }
 
-const NavBar: React.FC<Props> = ({ toggleTheme, theme }) => {
+const NavBar = ({ toggleTheme, theme } : Props) => {
   const icon = theme === "light" ? <HiMoon size={20} /> : <CgSun size={20} />;
   return (
     <div className="d-flex flex-column flex-md-row p-3 px-md-4 mb-3 nav-bar border-bottom shadow-sm">

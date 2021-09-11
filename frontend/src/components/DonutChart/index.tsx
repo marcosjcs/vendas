@@ -5,15 +5,16 @@ import { SaleSum } from 'types/sale';
 
 import api from 'services/api';
 
-interface Props {
+type Props = {
   theme: string;
 }
+
 type ChartData = {
   labels: string[];
   series: number[];
 }
 
-const DonutChart: React.FC<Props> = ({ theme })  => {
+const DonutChart: React.FC<Props> = ({ theme } : Props)  => {
 
   const [chartData, setChartData] = useState<ChartData>({ labels: [], series: [] });
   

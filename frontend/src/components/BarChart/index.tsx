@@ -6,7 +6,7 @@ import { round } from 'utils/format';
 
 import api from 'services/api';
 
-interface Props {
+type Props = {
   theme: string;
 }
 
@@ -22,7 +22,7 @@ type ChartData = {
   series: SeriesData[];
   };
 
-const BarChart: React.FC<Props> = ({ theme }) => {
+const BarChart = ({ theme } : Props) => {
   const [chartData, setChartData] = useState<ChartData>({
     labels: {
       categories: []
