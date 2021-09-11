@@ -35,7 +35,7 @@ const Routes = () => {
           <Route path="/dashboard" render={props => <Dashboard {...props} toggleTheme={toggleTheme} theme={theme}/>} />
           
         </ThemeProvider>
-        </Switch>
+      </Switch>
     </BrowserRouter>
   )
 };
